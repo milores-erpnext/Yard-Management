@@ -1,0 +1,583 @@
+{
+ "actions": [],
+ "allow_bulk_edit": 1,
+ "allow_rename": 1,
+ "creation": "2026-09-10 21:32:14.954174",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_8rts",
+  "amended_from",
+  "job_no",
+  "empty_in_time",
+  "column_break_lrms",
+  "stock",
+  "transport",
+  "back_to_port",
+  "cy",
+  "cmnr",
+  "empty_in_tab",
+  "customer_details",
+  "small_text_cjjx",
+  "customer",
+  "line",
+  "line_check",
+  "soc",
+  "third_party",
+  "column_break_xpek",
+  "yard_in_details",
+  "transport_type",
+  "vehicle_no",
+  "driver",
+  "move_code",
+  "movement_type_code",
+  "section_break_fwlj",
+  "container_details",
+  "location",
+  "container_number",
+  "container_type",
+  "seal_number",
+  "tare_weight",
+  "manufacturing_year",
+  "grade",
+  "column_break_qbxr",
+  "booking_details",
+  "work_order_no",
+  "booking_date",
+  "planned_date",
+  "section_break_iaqu",
+  "other_details",
+  "party",
+  "delivery_order",
+  "remarks",
+  "rejected",
+  "inspection_details",
+  "remark",
+  "column_break_igjc",
+  "yard_out_details",
+  "transport_types",
+  "vehicle",
+  "trailer_no",
+  "drivers",
+  "driver_mobile",
+  "move_codes",
+  "delivered_date",
+  "delivery_zone",
+  "delivery_location",
+  "generate_pod",
+  "soc_tab",
+  "soc_receive",
+  "srv_no",
+  "container_cost",
+  "local_procurement",
+  "soc_source_vendor",
+  "soc_source",
+  "manufacture_date",
+  "csc_valid",
+  "column_break_lgju",
+  "soc_selling",
+  "siv_no",
+  "receipt_no",
+  "invoice_no",
+  "party_name",
+  "section_break_rvtu",
+  "warehouse_status",
+  "occupied_status",
+  "stack",
+  "storage_party",
+  "storage_start_date",
+  "location_tab",
+  "zone",
+  "container_zone_map"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_8rts",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Yard In Empty",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "job_no",
+   "fieldtype": "Data",
+   "label": "Job No"
+  },
+  {
+   "default": "Now",
+   "fieldname": "empty_in_time",
+   "fieldtype": "Datetime",
+   "label": "Empty In Time"
+  },
+  {
+   "fieldname": "column_break_lrms",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "stock",
+   "fieldtype": "Check",
+   "label": "Stock"
+  },
+  {
+   "default": "0",
+   "fieldname": "transport",
+   "fieldtype": "Check",
+   "label": "Transport"
+  },
+  {
+   "default": "0",
+   "fieldname": "back_to_port",
+   "fieldtype": "Check",
+   "label": "Back To Port"
+  },
+  {
+   "default": "0",
+   "fieldname": "cy",
+   "fieldtype": "Check",
+   "label": "CY"
+  },
+  {
+   "default": "0",
+   "fieldname": "cmnr",
+   "fieldtype": "Check",
+   "label": "CMNR"
+  },
+  {
+   "fieldname": "empty_in_tab",
+   "fieldtype": "Tab Break",
+   "label": "Empty In"
+  },
+  {
+   "fieldname": "customer_details",
+   "fieldtype": "Heading",
+   "label": "Customer Details"
+  },
+  {
+   "default": "Role Assigned User Only Can Change the Line if it is SOC",
+   "fieldname": "small_text_cjjx",
+   "fieldtype": "Small Text",
+   "read_only": 1
+  },
+  {
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Customer",
+   "options": "Customer",
+   "reqd": 1
+  },
+  {
+   "fieldname": "line",
+   "fieldtype": "Link",
+   "label": "Line",
+   "options": "Supplier"
+  },
+  {
+   "default": "0",
+   "fieldname": "line_check",
+   "fieldtype": "Check",
+   "label": "Line"
+  },
+  {
+   "default": "0",
+   "fieldname": "soc",
+   "fieldtype": "Check",
+   "label": "SOC"
+  },
+  {
+   "default": "0",
+   "fieldname": "third_party",
+   "fieldtype": "Check",
+   "label": "Third Party"
+  },
+  {
+   "fieldname": "column_break_xpek",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "yard_in_details",
+   "fieldtype": "Heading",
+   "label": "Yard In Details"
+  },
+  {
+   "fieldname": "transport_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Transport Type",
+   "options": "\nHired",
+   "reqd": 1
+  },
+  {
+   "fieldname": "vehicle_no",
+   "fieldtype": "Link",
+   "label": "Vehicle No",
+   "options": "Vehicle",
+   "reqd": 1
+  },
+  {
+   "fieldname": "driver",
+   "fieldtype": "Link",
+   "label": "Driver",
+   "options": "Driver"
+  },
+  {
+   "fieldname": "move_code",
+   "fieldtype": "Select",
+   "label": "Move Code",
+   "options": "\nEMPTY IN\nEMPTY OUT\nFULL IN\nFULL OUT\nRELEASED TO SHIPPER\nRELEASED TO CONTAINER DEPOT"
+  },
+  {
+   "fieldname": "movement_type_code",
+   "fieldtype": "Select",
+   "label": "Movement Type Code",
+   "options": "Received from Consignee(RCVC)\nReceived from Vessel/Port(RCVE)",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_fwlj",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "container_details",
+   "fieldtype": "Heading",
+   "label": "Container Details"
+  },
+  {
+   "fieldname": "location",
+   "fieldtype": "Link",
+   "label": "Location",
+   "link_filters": "[[\"Warehouse\",\"is_group\",\"=\",0]]",
+   "options": "Warehouse",
+   "reqd": 1
+  },
+  {
+   "fieldname": "container_number",
+   "fieldtype": "Data",
+   "label": "Container Number"
+  },
+  {
+   "fieldname": "container_type",
+   "fieldtype": "Link",
+   "label": "Container Type",
+   "options": "Container Type"
+  },
+  {
+   "fieldname": "seal_number",
+   "fieldtype": "Data",
+   "label": "Seal Number"
+  },
+  {
+   "fieldname": "tare_weight",
+   "fieldtype": "Data",
+   "label": "Tare Weight"
+  },
+  {
+   "fieldname": "manufacturing_year",
+   "fieldtype": "Data",
+   "label": "Manufacturing Year"
+  },
+  {
+   "fieldname": "grade",
+   "fieldtype": "Select",
+   "label": "Grade",
+   "options": "\nA-Grade\nB-Grade\nC-Grade"
+  },
+  {
+   "fieldname": "column_break_qbxr",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "booking_details",
+   "fieldtype": "Heading",
+   "label": "Booking Details"
+  },
+  {
+   "fieldname": "work_order_no",
+   "fieldtype": "Data",
+   "label": "Work Order No"
+  },
+  {
+   "fieldname": "booking_date",
+   "fieldtype": "Date",
+   "label": "Booking Date"
+  },
+  {
+   "fieldname": "planned_date",
+   "fieldtype": "Date",
+   "label": "Planned Date"
+  },
+  {
+   "fieldname": "section_break_iaqu",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "other_details",
+   "fieldtype": "Heading",
+   "label": "Other Details"
+  },
+  {
+   "fieldname": "party",
+   "fieldtype": "Link",
+   "label": "Party",
+   "options": "Customer"
+  },
+  {
+   "fieldname": "delivery_order",
+   "fieldtype": "Data",
+   "label": "Delivery Order"
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Heading",
+   "label": "Remarks"
+  },
+  {
+   "default": "0",
+   "fieldname": "rejected",
+   "fieldtype": "Check",
+   "label": "Rejected"
+  },
+  {
+   "fieldname": "inspection_details",
+   "fieldtype": "Small Text",
+   "label": "Inspection Details"
+  },
+  {
+   "fieldname": "remark",
+   "fieldtype": "Small Text",
+   "label": "Remarks"
+  },
+  {
+   "fieldname": "column_break_igjc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "yard_out_details",
+   "fieldtype": "Heading",
+   "label": "Yard Out Details"
+  },
+  {
+   "fieldname": "transport_types",
+   "fieldtype": "Select",
+   "label": "Transport Type",
+   "options": "\n3rd Party"
+  },
+  {
+   "fieldname": "vehicle",
+   "fieldtype": "Link",
+   "label": "Vehicle No",
+   "options": "Vehicle",
+   "reqd": 1
+  },
+  {
+   "fieldname": "trailer_no",
+   "fieldtype": "Data",
+   "label": "Trailer No",
+   "reqd": 1
+  },
+  {
+   "fieldname": "drivers",
+   "fieldtype": "Link",
+   "label": "Driver",
+   "options": "Driver",
+   "reqd": 1
+  },
+  {
+   "fieldname": "driver_mobile",
+   "fieldtype": "Data",
+   "label": "Driver Mobile",
+   "reqd": 1
+  },
+  {
+   "fieldname": "move_codes",
+   "fieldtype": "Select",
+   "label": "Move Code",
+   "options": "\nEMPTY IN\nEMPTY OUT\nFULL IN\nFULL OUT\nRELEASED TO SHIPPER\nRELEASED TO CONTAINER DEPOT"
+  },
+  {
+   "fieldname": "delivered_date",
+   "fieldtype": "Date",
+   "label": "Delivered Date"
+  },
+  {
+   "fieldname": "delivery_zone",
+   "fieldtype": "Select",
+   "label": "Delivery Zone",
+   "options": "\nReturn\nTransit\nUAE-R\nUAE-T"
+  },
+  {
+   "fieldname": "delivery_location",
+   "fieldtype": "Data",
+   "label": "Delivery Location"
+  },
+  {
+   "fieldname": "generate_pod",
+   "fieldtype": "Button",
+   "label": "Generate POD"
+  },
+  {
+   "fieldname": "soc_tab",
+   "fieldtype": "Tab Break",
+   "label": "SOC"
+  },
+  {
+   "fieldname": "soc_receive",
+   "fieldtype": "Heading",
+   "label": "SOC Receive"
+  },
+  {
+   "fieldname": "srv_no",
+   "fieldtype": "Data",
+   "label": "SRV No"
+  },
+  {
+   "fieldname": "container_cost",
+   "fieldtype": "Data",
+   "label": "Container Cost"
+  },
+  {
+   "default": "0",
+   "fieldname": "local_procurement",
+   "fieldtype": "Check",
+   "label": "Local Procurement"
+  },
+  {
+   "fieldname": "soc_source_vendor",
+   "fieldtype": "Data",
+   "label": "SOC Source Vendor"
+  },
+  {
+   "fieldname": "column_break_lgju",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "soc_selling",
+   "fieldtype": "Heading",
+   "label": "SOC Selling"
+  },
+  {
+   "fieldname": "soc_source",
+   "fieldtype": "Data",
+   "label": "SOC Source"
+  },
+  {
+   "fieldname": "manufacture_date",
+   "fieldtype": "Date",
+   "label": "Manufacture Date"
+  },
+  {
+   "default": "0",
+   "fieldname": "csc_valid",
+   "fieldtype": "Check",
+   "label": "CSC Valid"
+  },
+  {
+   "fieldname": "siv_no",
+   "fieldtype": "Data",
+   "label": "SIV No"
+  },
+  {
+   "fieldname": "receipt_no",
+   "fieldtype": "Link",
+   "label": "Receipt No",
+   "options": "Purchase Receipt"
+  },
+  {
+   "fieldname": "invoice_no",
+   "fieldtype": "Link",
+   "label": "Invoice No",
+   "options": "Sales Invoice"
+  },
+  {
+   "fieldname": "party_name",
+   "fieldtype": "Link",
+   "label": "Party Name",
+   "options": "Customer"
+  },
+  {
+   "fieldname": "section_break_rvtu",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "warehouse_status",
+   "fieldtype": "Heading",
+   "label": "Warehouse Status"
+  },
+  {
+   "fieldname": "occupied_status",
+   "fieldtype": "Select",
+   "label": "Occupied Status",
+   "options": "\nNot Occupied\nOccupied"
+  },
+  {
+   "fieldname": "stack",
+   "fieldtype": "Select",
+   "label": "Stack",
+   "options": "\nStack-1\nStack-2\nStack-3\nStack-4"
+  },
+  {
+   "fieldname": "storage_party",
+   "fieldtype": "Link",
+   "label": "Storage Party",
+   "options": "Customer"
+  },
+  {
+   "fieldname": "storage_start_date",
+   "fieldtype": "Date",
+   "label": "Storage Start Date"
+  },
+  {
+   "fieldname": "location_tab",
+   "fieldtype": "Tab Break",
+   "label": "Location"
+  },
+  {
+   "fieldname": "zone",
+   "fieldtype": "Link",
+   "label": "Zone",
+   "options": "Zone"
+  },
+  {
+   "fieldname": "container_zone_map",
+   "fieldtype": "HTML",
+   "label": "Container Zone Map"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2026-09-14 21:56:49.689487",
+ "modified_by": "Administrator",
+ "module": "Yard Management",
+ "name": "Yard In Empty",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}
